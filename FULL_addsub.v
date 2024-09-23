@@ -1,4 +1,4 @@
-module FULL_addsub(a,b,cin,sum,carry,BO,DIFF);
+module FULL_addsub(a,b,c,sum,carry,BO,DIFF);
 input a,b,c;
 output sum,carry,BO,DIFF;
 wire abar;
