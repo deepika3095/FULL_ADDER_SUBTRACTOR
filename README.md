@@ -35,21 +35,28 @@ A full subtractor is a combinational circuit that performs subtraction involving
 Diff = A ⊕ B ⊕ Bin 
 
 Borrow out = A'Bin + A'B + BBin
-
-**Truthtable**
-
-**Procedure**
-
-Write the detailed procedure here
-
 **Program:**
+```
+module exp4(a,b,c,sum,carry,BO,DIFF);
+input a,b,c;
+output sum,carry,BO,DIFF;
+wire abar;
+not (abar,a);
+assign sum = a^b^c;
+assign carry = (a&b)|(a&c)|(b&c);
+assign DIFF = a^b^c;
+assign BO = (~a&b)|(~a&c)|(b&c);  
+endmodule
+```
+Developed by:Deepika R
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+212223230038
 
 **RTL Schematic**
+![Screenshot (101)](https://github.com/user-attachments/assets/254db488-03a1-415a-81b2-3e8be1a7942d)
 
 **Output Timing Waveform**
+![Screenshot (100)](https://github.com/user-attachments/assets/34b5a08f-96b6-44a1-8845-3d65a5ef42fc)
 
 **Result:**
 
